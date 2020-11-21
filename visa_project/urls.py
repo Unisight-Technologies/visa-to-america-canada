@@ -22,4 +22,10 @@ urlpatterns = [
     path('', views.HomePage.as_view(),name="index"),
     path('inner/', views.InnerPage.as_view(),name="inner"),
     path('portfolio/', views.PortfolioPage.as_view(),name="portfolio"),
+    path('pricing/', views.PricingPage.as_view(),name="pricing"),
+    path('services/', views.ServicesPage.as_view(),name="services"),
+    path('team/', views.TeamPage.as_view(),name="team"),
+    path('about/', views.AboutPage.as_view(),name="about"),
+    path('contact/', views.ContactPage.as_view(),name="contact"),
+
 ]
