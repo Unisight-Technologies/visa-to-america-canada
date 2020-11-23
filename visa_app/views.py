@@ -29,3 +29,9 @@ class ServicesPage(TemplateView):
 
 class TeamPage(TemplateView):
     template_name = "team.html"
+
+class ExpressEntry(TemplateView):
+    template_name = "express_entry.html"
+
+class CareGiver(TemplateView):
+    template_name = "care_giver.html"
