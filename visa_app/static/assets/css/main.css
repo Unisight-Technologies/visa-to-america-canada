@@ -5,3 +5,22 @@
 #intro, #process, #eligibility {
   display: none;
 }
+
+#main{
+  margin-top: 100px;
+}
+
+/* PIECHART START */
+.container1 {
+  width: 50%;
+  margin-left: 10%;
+}
+
+@media only screen and (max-width: 700px) {
+  .container1{
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* PIECHART ENDS */
