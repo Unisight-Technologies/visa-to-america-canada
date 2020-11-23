@@ -1,0 +1,7 @@
+.resize {
+  max-width:100%;
+}
+
+#intro, #process, #eligibility {
+  display: none;
+}

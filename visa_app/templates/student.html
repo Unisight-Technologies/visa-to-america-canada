@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+
+<main id="main">
+
+
+<!-- ======= Services Section ======= -->
+<section id="services" class="services">
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Students</h2>
+      <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" onclick="showContent('intro')" data-aos="fade-up">
+        <div class="icon-box">
+          <!-- <div class="icon"><i class="bx bxl-dribbble"></i></div> -->
+          <img class="resize" src="https://img.freepik.com/free-photo/group-happy-young-students-university_85574-4531.jpg?size=626&ext=jpg" alt="">
+          <h4><a href="">Introduction</a></h4>
+          <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" onclick="showContent('eligibility')" data-aos="fade-up" data-aos-delay="150">
+        <div class="icon-box">
+
+           <img class="resize" src="https://img.freepik.com/free-photo/group-happy-young-students-university_85574-4531.jpg?size=626&ext=jpg" alt="">
+          <h4><a href="">Eligibilty</a></h4>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" onclick="showContent('process')" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon-box">
+          <!-- <div class="icon"><i class="bx bx-tachometer"></i></div> -->
+          <img class="resize" src="https://img.freepik.com/free-photo/group-happy-young-students-university_85574-4531.jpg?size=626&ext=jpg" alt="">
+          <h4><a href="">Processing Criteria</a></h4>
+          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Services Section -->
+
+
+<section>
+
+  <div id="intro">
+      <div class="container" data-aos="zoom-in">
+    <p>1Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    </div>
+  </div>
+
+  <div id="eligibility">
+      <div class="container" data-aos="zoom-in">
+    <p>2Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+
+  <div id="process">
+      <div class="container" data-aos="zoom-in">
+    <p>3Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    </div>
+  </div>
+
+</section>
+
+
+
+</main>
+{% endblock %}

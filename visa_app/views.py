@@ -18,6 +18,9 @@ class AboutPage(TemplateView):
 class ContactPage(TemplateView):
     template_name = "contact.html"
 
+class StudentPage(TemplateView):
+    template_name = "student.html"
+
 class PricingPage(TemplateView):
     template_name = "pricing.html"
 
