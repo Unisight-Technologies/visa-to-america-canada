@@ -59,14 +59,16 @@
     <header id="header" class="fixed-top ">
       <div class="container d-flex align-items-center">
         <a href="{% url 'index' %}" class="logo mr-auto"><img src="{% static 'assets/img/logo/VisaTo_CANADA-logo-8F-final.JPG' %}" alt="" class="img-fluid"></a>
+        <a href="#"> <img src="https://cdn.countryflags.com/thumbs/canada/flag-800.png" style="height:40px"> </a>
         <!-- <h1 class="logo mr-auto"><a href="{% url 'index' %}">Visa to Canada</a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo  -->
 
         <nav class="nav-menu d-none d-lg-block">
           <ul>
-            <li class="active"><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'services' %}">Services</a></li>
+            <li class="active"><a href="{% url 'index' %}">Express Entry</a></li>
+              <li class="active"><a href="{% url 'index' %}">Express Nominee</a></li>
+            <li><a href="{% url 'about' %}">Caregivers</a></li>
+            <li><a href="{% url 'services' %}">Investments</a></li>
             <!-- <li><a href="{% url 'portfolio' %}">Portfolio</a></li> -->
             <!-- <li><a href="{% url 'pricing' %}">Pricing</a></li> -->
             <li class="drop-down"><a href="">Drop Down</a>
@@ -85,7 +87,7 @@
                 <li><a href="#">Drop Down 3</a></li>
                 <li><a href="#">Drop Down 4</a></li>
               </ul>
-            <li><a href="{% url 'team' %}">Team</a></li>
+            <li><a href="{% url 'team' %}">Students</a></li>
             <!-- <li class="drop-down"><a href="">Drop Down</a>
               <ul>
                 <li><a href="#">Drop Down 1</a></li>
@@ -104,6 +106,11 @@
               </ul>
             </li> -->
             <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            <li class="drop-down"><a href="">English</a>
+              <ul>
+                <li><a class="btn" href="/fr/immigration-refugies-citoyennete/campagnes/inde-visa.html" lang="en">English</a></li>
+                <li><a class="btn" href="/fr/immigration-refugies-citoyennete/campagnes/inde-visa.html" lang="fr">Français</a></li>
+              </ul>
 
           </ul>
         </nav><!-- .nav-menu -->
