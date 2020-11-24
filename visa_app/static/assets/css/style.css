@@ -18,7 +18,7 @@ a {
 }
 
 a:hover {
-  color: #e82d2d;
+  color: black;
   text-decoration: none;
 }
 
@@ -945,7 +945,7 @@ section {
   padding: 0;
   list-style: none;
   color: #191919;
-  text-align: center;
+  text-align: left;
   line-height: 20px;
   font-size: 14px;
 }

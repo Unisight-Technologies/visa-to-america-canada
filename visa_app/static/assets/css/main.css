@@ -23,7 +23,19 @@
   }
 }
 
+
+/* PIECHART ENDS */
+
 .shadow {
   box-shadow: 5px 10px #888888;
+  color: black;
 }
-/* PIECHART ENDS */
+
+.style1 {
+  background-color: navajowhite;
+  color: black;
+}
+
+#pad {
+  padding: 5%; 
+}
