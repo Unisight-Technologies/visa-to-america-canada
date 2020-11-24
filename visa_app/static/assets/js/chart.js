@@ -26,7 +26,65 @@ canvas.onclick = function(evt){
         var idx = activePoints[0]['_index'];
 
         var label = chartData.labels[idx];
-        alert(label);
+        if(label == "Language"){
+          $('#edu').css('display', 'none');
+          $('#work').css('display', 'none');
+          $('#adapt').css('display', 'none');
+          $('#emp').css('display', 'none');
+          $('#age').css('display', 'none');
+          $('#lang').slideToggle();
+
+        }
+
+        if(label == "Education"){
+          $('#lang').css('display', 'none');
+          $('#work').css('display', 'none');
+          $('#adapt').css('display', 'none');
+          $('#emp').css('display', 'none');
+          $('#age').css('display', 'none');
+          $('#edu').slideToggle();
+
+        }
+
+        if(label == "Work Experience"){
+          $('#lang').css('display', 'none');
+          $('#edu').css('display', 'none');
+          $('#adapt').css('display', 'none');
+          $('#emp').css('display', 'none');
+          $('#age').css('display', 'none');
+          $('#work').slideToggle();
+
+        }
+
+        if(label == "Age"){
+          $('#lang').css('display', 'none');
+          $('#work').css('display', 'none');
+          $('#adapt').css('display', 'none');
+          $('#emp').css('display', 'none');
+          $('#edu').css('display', 'none');
+          $('#age').slideToggle();
+
+        }
+
+        if(label == "Arranged Employment"){
+          $('#lang').css('display', 'none');
+          $('#work').css('display', 'none');
+          $('#adapt').css('display', 'none');
+          $('#edu').css('display', 'none');
+          $('#age').css('display', 'none');
+          $('#emp').slideToggle();
+
+        }
+
+        if(label == "Adaptability"){
+          $('#lang').css('display', 'none');
+          $('#work').css('display', 'none');
+          $('#edu').css('display', 'none');
+          $('#emp').css('display', 'none');
+          $('#age').css('display', 'none');
+          $('#adapt').slideToggle();
+
+        }
       }
 
     // => activePoints is an array of points on the canvas that are at the same position as the click event.

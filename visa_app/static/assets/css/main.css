@@ -2,7 +2,8 @@
   max-width:100%;
 }
 
-#intro, #process, #eligibility {
+#intro, #process, #eligibility , #lang, #edu, #work
+#adapt, #emp, #age{
   display: none;
 }
 
@@ -37,5 +38,5 @@
 }
 
 #pad {
-  padding: 5%; 
+  padding: 5%;
 }
