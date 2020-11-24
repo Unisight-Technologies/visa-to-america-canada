@@ -1515,6 +1515,14 @@ section {
   animation: fadeIn 0.5s ease-out;
 }
 
+.specials .tab-content ul{
+  list-style: none;
+}
+
+.specials .tab-content ul i{
+  color: #cc1616;
+}
+
 .specials .details h3 {
   font-size: 26px;
   font-weight: 600;
@@ -1562,7 +1570,6 @@ section {
 
 .section-title-details{
   color: #000000;
-
 }
 
 .section-title p {
