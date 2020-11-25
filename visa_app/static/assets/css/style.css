@@ -162,7 +162,8 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: black;
+  background: white;
+  color: black;
   transition: all 0.5s;
   z-index: 997;
   top: 40px;
@@ -253,9 +254,9 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
   font-family: "Open Sans", sans-serif;
 }
 
-.nav-menu > ul > li:hover, .nav-menu .active {
+/* .nav-menu > ul > li:hover, .nav-menu .active {
   background: #cc1616;
-}
+} */
 
 .nav-menu .drop-down ul {
   display: block;

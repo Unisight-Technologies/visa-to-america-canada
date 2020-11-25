@@ -40,3 +40,65 @@
 #pad {
   padding: 5%;
 }
+
+.container-nav{
+
+}
+
+.nav-menu a{
+  color: black;
+}
+
+.nav-menu li:hover > a{
+  color: white;
+}
+.nav-menu li:hover{
+  background-color: #cc1616;
+}
+
+.nav-inspiring p{
+  color: black;
+}
+
+.logo1{
+  margin-left: 8%;
+  margin-right: 5%;
+  width: 150px;
+}
+
+@media (max-width: 600px){
+.logo1{
+  width: 100px;
+}
+}
+
+.nav-right{
+  float: right;
+}
+
+.nav-menu{
+  margin-right: 8%;
+}
+
+#header.header-scrolled{
+  background: white;
+}
+
+@media (max-width: 992px){
+#header {
+    top: 0;
+    padding: 15px 0;
+    background: white;
+}
+}
+
+.mobile-nav-toggle i{
+  color: black;
+  vertical-align: sub;
+}
+
+@media (max-width: 600px){
+.nav-inspiring {
+    display: none;
+}
+}
