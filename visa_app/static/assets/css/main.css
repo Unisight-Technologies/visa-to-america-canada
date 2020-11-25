@@ -162,3 +162,32 @@
     max-width: 100%;
     height: auto;
 }
+
+#footer{
+  background: #23347C;
+}
+
+#footer .footer-top .footer-info{
+  background: #dedede;
+  color: black;
+}
+
+.footer-logo{
+  width: 200px;
+}
+
+#topbar .contact-info a, #topbar{
+  color: white;
+}
+
+#topbar{
+  background: #6F6F6F;
+}
+
+#contact{
+  background: white;
+}
+
+.icon-box{
+  background: white;
+}
