@@ -195,3 +195,25 @@
 .nav-menu > ul > li{
   padding: 18px 10px
 }
+
+.btn-get-started {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding: 10px 28px;
+    transition: 0.5s;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-get-started:hover {
+    background: #cc1616;
+    border-color: #cc1616;
+}
+
+.fa-hand-point-right{
+  color: #CC1616
+}
