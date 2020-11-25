@@ -33,7 +33,7 @@
 }
 
 .style1 {
-  background-color: navajowhite;
+  background-color: ghostwhite;
   color: black;
 }
 
@@ -101,4 +101,64 @@
 .nav-inspiring {
     display: none;
 }
+}
+
+
+
+/* for cards */
+
+
+
+
+.animated {
+  visibility: visible;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated.slow {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+.animated.fadeIn {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.odd-about-card{
+    background-color: black;
+    color: black;
+    padding: 30px;
+    border-radius: 30px;
+    color: white;
+}
+
+
+.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
