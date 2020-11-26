@@ -30,6 +30,7 @@ urlpatterns = [
     path('contact/', views.ContactPage.as_view(),name="contact"),
     path('express_entry/', views.ExpressEntry.as_view(),name="express_entry"),
     path('care_giver/', views.CareGiver.as_view(),name="care_giver"),
+    path('blogs/', views.Blog.as_view(), name="blogs")
 
 
 ]

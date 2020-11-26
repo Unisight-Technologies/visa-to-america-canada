@@ -35,3 +35,7 @@ class ExpressEntry(TemplateView):
 
 class CareGiver(TemplateView):
     template_name = "care_giver.html"
+
+class Blog(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'blogs.html')
