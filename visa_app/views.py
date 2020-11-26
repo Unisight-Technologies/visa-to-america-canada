@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View, TemplateView
+from . import models
 
 class HomePage(TemplateView):
     template_name = "index.html"
@@ -38,4 +39,10 @@ class CareGiver(TemplateView):
 
 class Blog(View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'blogs.html')
+
+        news = models.News.objects.all()
+        context = {
+            'news': news
+        }
+
+        return render(request, 'blogs.html', context=context)

@@ -5,28 +5,41 @@
 <main id="main">
 
 <section id="blogs">
+<div class="section-title">
+  <span style="color: black;">Breaking News</span>
+
+</div>
   <div class="container">
-    <div class="blog-box">
-      <div class="row" data-aos="fade-up">
 
-      <div class="col">
-        <a href="#"><h3 class="blog-head">Two new VACs open in U.S. offering biometrics</h3></a>
+    {% for article in news %}
+          <div class="blog-box">
+            <div class="row" data-aos="fade-up">
 
-        <p class="blog-para">U.S. residents now have two new locations to
-          submit biometrics for their Canadian immigration application.</p>
-        <p class="blog-author">By Shelby Thevenot</p>
-      </div>
+            <div class="col">
+              <a href="{{ article.url }}"><h3 class="blog-head">{{ article.title }}</h3></a>
 
-      <div class="col">
-        <img class="blog-img" src="https://www.cicnews.com/wp-content/uploads/2020/11/20201123biometrics.jpg.webp" alt="">
-      </div>
+              <p class="blog-para">{{ article.description }}</p>
 
-    </div>
+              {% if article.author %}
+                <p class="blog-author">By <b>{{ article.author }}</b></p>
+              {% endif %}
 
-    </div>
+              {% if article.date %}
+                <p class="blog-date">{{ article.date }}</p>
+              {% endif %}
+              <p class="blog-source">Source: <i><b>{{ article.source }}</b></i></p>
+            </div>
+
+            <div class="col">
+              <img class="blog-img" src="{{ article.imageURL }}" alt="">
+            </div>
+
+          </div>
+
+          </div>
+    {% endfor %}
   </div>
 </section>
-
 
 
 </main>
