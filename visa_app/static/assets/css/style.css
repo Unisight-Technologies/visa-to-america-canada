@@ -279,7 +279,7 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
   position: relative;
   white-space: nowrap;
   padding: 18px 5px;
-  margin-left: 0px;
+  margin-left: 10px;
   transition: 0.3s;
 }
 .nav-inspiring p{
