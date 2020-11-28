@@ -337,7 +337,7 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-  color: #white;
+  color: #fff;
 }
 
 .nav-menu .drop-down > a:after {
@@ -709,7 +709,7 @@ section {
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
 
-.why-us .box:hover span, .why-us .box:hover h4, .why-us .box:hover p {
+.why-us .box:hover span, .why-us .box:hover h4, .why-us .box:hover p,.why-us .box:hover a {
   color: #fff;
 }
 
