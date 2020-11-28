@@ -25,6 +25,9 @@ class StudentPage(TemplateView):
 class PricingPage(TemplateView):
     template_name = "pricing.html"
 
+class Nominee(TemplateView):
+    template_name = "nominee.html"
+
 class ServicesPage(TemplateView):
     template_name = "services.html"
 

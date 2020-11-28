@@ -24,3 +24,12 @@ if (name == 'process'){
 }
 
 }
+
+
+// For Showing content to other page to particular section
+//
+// $("#federal1").click(function(){   //id of the link which is being clicked
+//       $('html, body').animate({
+//              scrollTop: $("#federal").offset().top   //id of div to be scrolled
+//       }, 1000);
+// });

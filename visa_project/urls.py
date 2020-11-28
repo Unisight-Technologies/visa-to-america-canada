@@ -30,6 +30,7 @@ urlpatterns = [
     path('about/', views.AboutPage.as_view(),name="about"),
     path('student/', views.StudentPage.as_view(),name="student"),
     path('contact/', views.ContactPage.as_view(),name="contact"),
+    path('nominee/', views.Nominee.as_view(),name="nominee"),
     path('express_entry/', views.ExpressEntry.as_view(),name="express_entry"),
     path('care_giver/', views.CareGiver.as_view(),name="care_giver"),
     path('blogs/', views.Blog.as_view(), name="blogs")
