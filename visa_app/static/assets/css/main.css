@@ -309,7 +309,9 @@
   margin: 20px auto;
   width: 250px;
   height: 250px;
-  background: white;
+  background-image: linear-gradient(#0062cc, #dc3545);
+  box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+
   border-radius: 75px;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
@@ -415,4 +417,11 @@
     top: -5px;
     right: 0;
   }
+}
+
+
+
+
+.cont-text {
+  color: white;
 }
