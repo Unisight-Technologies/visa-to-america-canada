@@ -253,12 +253,48 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
 
 .carousel-fade .carousel-title {
   color: #fff;
-  font-family: "Raleway", sans-serif;
+  font-family: "Oswald";
   font-size: 50px;
   text-transform: uppercase;
   font-weight: bold;
   font-style: italic;
 }
+@media (max-width: 480px) {
+
+  .carousel-fade .carousel-subtitle {
+    font-size: 14px;
+    margin: -50px;
+  }
+  .carousel-fade .carousel-indicators {
+    bottom: 0;
+  }
+}
+
+/* Small devices (tablets, 768px and Down) */
+@media (max-width: 768px) {
+  .carousel-fade .carousel-title {
+    font-size: 32px;
+  }
+  .carousel-fade .carousel-subtitle {
+    font-size: 16px;
+  }
+  .carousel-fade .carousel-control {
+    background: #1f76bd;
+    height: 40px;
+    width: 20px;
+    top: 50%;
+    margin-top: -20px;
+  }
+  .carousel-fade .carousel-control .fa {
+    font-size: 1.5em;
+    padding-top: 4px;
+  }
+
+  .col-form {
+    margin-bottom: 25px;
+  }
+}
+
 
 
 /*--------------------------------------------------------------
