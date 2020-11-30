@@ -28,6 +28,7 @@ urlpatterns = [
     path('services/', views.ServicesPage.as_view(),name="services"),
     path('team/', views.TeamPage.as_view(),name="team"),
     path('about/', views.AboutPage.as_view(),name="about"),
+    path('family/', views.FamilyPage.as_view(),name="family"),
     path('student/', views.StudentPage.as_view(),name="student"),
     path('contact/', views.ContactPage.as_view(),name="contact"),
     path('nominee/', views.Nominee.as_view(),name="nominee"),

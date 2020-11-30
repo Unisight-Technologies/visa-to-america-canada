@@ -31,3 +31,12 @@ class News(models.Model):
         except:
             url = ''
         return url
+
+
+
+class Contact(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.BigIntegerField()
+    subject = models.CharField(max_length=200)
+    message = models.CharField(max_length=800)
