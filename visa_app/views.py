@@ -28,6 +28,9 @@ class PricingPage(TemplateView):
 class Nominee(TemplateView):
     template_name = "nominee.html"
 
+class FamilyPage(TemplateView):
+    template_name = "family.html"
+
 class ServicesPage(TemplateView):
     template_name = "services.html"
 
