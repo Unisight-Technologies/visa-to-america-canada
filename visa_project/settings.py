@@ -27,7 +27,7 @@ SECRET_KEY = 'wp-u+6m&p-si0zh&qzo1dl8@kog-xi07fwfm8q#vhlax_4$6_7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-65-0-19-167.ap-south-1.compute.amazonaws.com']
 
 
 # Application definition
