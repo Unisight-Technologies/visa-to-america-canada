@@ -11,6 +11,11 @@
 }
 
 
+@media only screen and (max-width: 700px) {
+  .responsive{
+    padding-left: 0;
+  }
+}
 
 /* PIECHART START */
 .container1 {
