@@ -4,7 +4,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 import pprint
 
-URL = "http://www.values.com/inspirational-quotes"
+URL = "https://www.cicnews.com/latest-immigration-news.html"
 html = urllib.request.urlopen(URL).read()
 soup = BeautifulSoup(html, 'html.parser')
 
