@@ -2,7 +2,7 @@ var ctx = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: ["Language", "Education", "Work Experience", "Age", "Arranged Employment", "Adaptability"],
+    labels: ["Language- Your score:25 out of", "Education", "Work Experience", "Age", "Arranged Employment", "Adaptability"],
     datasets: [{
       backgroundColor: [
         "#2ecc71",
@@ -14,10 +14,42 @@ var myChart = new Chart(ctx, {
       ],
       data: [28, 25, 15, 12, 10, 10]
     }]
-  }
+  },
+  weight: 150
 });
 //
 var canvas = document.getElementById("myChart");
+
+function languagePressed(){
+
+  $('#language').modal();
+}
+
+function educationPressed(){
+  $('#education').modal();
+
+
+}
+function workPressed(){
+  $('#work').modal();
+
+
+}
+function employmentPressed(){
+  $('#employment').modal();
+
+
+}
+function adaptabilityPressed(){
+  $('#adaptability').modal();
+
+
+}
+function agePressed(){
+  $('#age').modal();
+
+
+}
 
 canvas.onclick = function(evt){
     var activePoints = myChart.getElementsAtEvent(evt);
@@ -27,6 +59,7 @@ canvas.onclick = function(evt){
 
         var label = chartData.labels[idx];
         if(label == "Language"){
+          languagePressed();
           $('#edu').css('display', 'none');
           $('#work').css('display', 'none');
           $('#adapt').css('display', 'none');
@@ -37,6 +70,7 @@ canvas.onclick = function(evt){
         }
 
         if(label == "Education"){
+          educationPressed();
           $('#lang').css('display', 'none');
           $('#work').css('display', 'none');
           $('#adapt').css('display', 'none');
@@ -47,6 +81,7 @@ canvas.onclick = function(evt){
         }
 
         if(label == "Work Experience"){
+          workPressed();
           $('#lang').css('display', 'none');
           $('#edu').css('display', 'none');
           $('#adapt').css('display', 'none');
@@ -57,6 +92,7 @@ canvas.onclick = function(evt){
         }
 
         if(label == "Age"){
+          agePressed();
           $('#lang').css('display', 'none');
           $('#work').css('display', 'none');
           $('#adapt').css('display', 'none');
@@ -67,6 +103,7 @@ canvas.onclick = function(evt){
         }
 
         if(label == "Arranged Employment"){
+          employmentPressed();
           $('#lang').css('display', 'none');
           $('#work').css('display', 'none');
           $('#adapt').css('display', 'none');
@@ -77,6 +114,7 @@ canvas.onclick = function(evt){
         }
 
         if(label == "Adaptability"){
+          adaptabilityPressed();
           $('#lang').css('display', 'none');
           $('#work').css('display', 'none');
           $('#edu').css('display', 'none');

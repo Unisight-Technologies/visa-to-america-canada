@@ -2,6 +2,223 @@
 {% load static %}
 {% block body_block %}
 
+<!-- ------------------MODALS START----------------------- -->
+<!-- Modal education-->
+<div class="modal fade" id="education" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Education Criteria</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="">Select your education status:</label>
+            <select class="modal-dropdown" name="">
+              <option value="25">
+                University Degree at the Doctoral(PHD) Level
+              </option>
+              <option value="23">
+                University Degree at the Master's Level or equal OR University Entry
+                  to practice proffesional degree.
+              </option>
+              <option value="21">Canadian Post Secondary Degree OR Diploma
+                 for programs longer than 3 or equal years.
+               </option>
+              <option value="19">
+                Canadian Post Secondary Degree OR Diploma
+                for programs longer than 2 or equal years.
+              </option>
+              <option value="15">
+                Canadian Post Secondary Degree OR Diploma
+                for programs longer than 1 or equal years.
+              </option>
+              <option value="5">
+                Canadian High School Diploma OR Equal
+              </option>
+            </select>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal language-->
+<div class="modal fade" id="language" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal work-->
+<div class="modal fade" id="work" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Work Experience Criteria</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label for="">Select your work experience:</label><br>
+          <select class="modal-dropdown" name="">
+            <option value="15">6 or more years</option>
+            <option value="13">4-5 years</option>
+            <option value="11">2-3 years</option>
+            <option value="9">1 year</option>
+
+          </select>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal age-->
+<div class="modal fade" id="age" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Age Criteria</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label for="">Select your age:</label><br>
+          <select class="modal-dropdown" name="">
+            <option value="0">Under 18</option>
+            <option value="12">18-35</option>
+            <option value="11">36</option>
+            <option value="10">37</option>
+            <option value="9">38</option>
+            <option value="8">39</option>
+            <option value="7">40</option>
+            <option value="6">41</option>
+            <option value="5">42</option>
+            <option value="4">43</option>
+            <option value="3">44</option>
+            <option value="2">45</option>
+            <option value="1">46</option>
+            <option value="0">47</option>
+          </select>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Adaptability-->
+<div class="modal fade" id="adaptability" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Adaptability Criteria</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label for="">Select an appropriate option:</label><br>
+          <select class="modal-dropdown" name="">
+            <option value="5">Your spouse or partner's language level</option>
+            <option value="5">Your study in Canada</option>
+            <option value="5">Your spouse or partner's past study in Canada</option>
+            <option value="10">Your past your in Canada</option>
+            <option value="5">Your spouse or common-law partner's past work in Canada</option>
+            <option value="5">Arranged Employment in Canada</option>
+            <option value="5">Relatives in Canada(Check this criteria's description below)</option>
+
+          </select>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal employment-->
+<div class="modal fade" id="employment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Arranged Employment</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label for="">Select your Employment status:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="10" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Valid Job offer
+            </label>
+          </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="0">
+          <label class="form-check-label" for="exampleRadios2">
+              No Job offer
+          </label>
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------------------MODALS END----------------------- -->
 
 
 <main id="main">
@@ -287,8 +504,13 @@
 </section>
 
 
-
 </main>
+
+<script type="text/javascript">
+  $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 {% endblock %}
