@@ -12,6 +12,11 @@
 
 #google_translate_element{
   margin-right: 20px;
+  background-color: #cc1616;
+}
+
+.goog-te-gadget-simple{
+  background-color: #cc1616;
 }
 
 .modal-dropdown{
