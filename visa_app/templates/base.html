@@ -70,6 +70,7 @@
         <!--  -->
         <!-- <h1 class="logo mr-auto"><a href="{% url 'index' %}">Visa to Canada</a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo  -->
+        <div id="google_translate_element"></div>
 
         <nav class="nav-menu ml-auto d-none d-lg-block">
           <ul>
@@ -111,11 +112,14 @@
             <!-- <li><a href="{% url 'student' %}">Students</a></li> -->
 
             <li><a href="{% url 'contact' %}">Contact Us</a></li>
+
+            <li></li>
             <!-- <li class="drop-down"><a href="">English</a>
               <ul>
                 <li><a class="btn" href="/fr/immigration-refugies-citoyennete/campagnes/inde-visa.html" lang="en">English</a></li>
                 <li><a class="btn" href="/fr/immigration-refugies-citoyennete/campagnes/inde-visa.html" lang="fr">Français</a></li>
               </ul> -->
+
 
           </ul>
         </nav><!-- .nav-menu -->
@@ -226,7 +230,12 @@
     <!-- Font awesome -->
   <script src="https://kit.fontawesome.com/f2148c770f.js" crossorigin="anonymous"></script>
 
-
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

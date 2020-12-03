@@ -10,6 +10,17 @@
   margin-top: 100px;
 }
 
+#google_translate_element{
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  #google_translate_element{
+    width: 20px;
+    overflow: hidden;
+  }
+}
+
 
 @media only screen and (max-width: 700px) {
   .responsive{
@@ -200,7 +211,12 @@
 }
 
 .nav-menu > ul > li{
-  padding: 18px 10px
+  padding: 10px 10px;
+  margin-left: 0px;
+}
+
+#news-btn{
+  margin-right: 10px;
 }
 
 .btn-get-started {
