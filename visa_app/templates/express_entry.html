@@ -4,20 +4,31 @@
 
 <!-- ------------------MODALS START----------------------- -->
 <!-- Modal education-->
-<div class="modal fade" id="education" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="main_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Education Criteria</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Compute your score!</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form name="score-form">
+
+
           <div class="form-group">
-            <label for="">Select your education status:</label>
-            <select class="modal-dropdown" name="">
+
+            <b><label for="">Enter your Language score: </label></b><br>
+            <label for="">(If not given any test, <a onclick="showPopup()" href="#">check out these links</a></label><br>
+
+            <input type="number" name="language" min="0" max="28" value=""><br><br>
+            <!-- <span class="popuptext show" id="myPopup">
+              We only need your email to send you payment receipt.<br><br>
+              We won't be storing your email in our database.
+            </span> -->
+            <b><label for="">Select your education status:</label></b>
+            <select class="modal-dropdown" name="education">
               <option value="25">
                 University Degree at the Doctoral(PHD) Level
               </option>
@@ -42,90 +53,16 @@
             </select>
           </div>
 
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal language-->
-<div class="modal fade" id="language" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal work-->
-<div class="modal fade" id="work" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Work Experience Criteria</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <label for="">Select your work experience:</label><br>
-          <select class="modal-dropdown" name="">
+          <b><label for="">Select your work experience:</label></b><br>
+          <select class="modal-dropdown" name="work">
             <option value="15">6 or more years</option>
             <option value="13">4-5 years</option>
             <option value="11">2-3 years</option>
             <option value="9">1 year</option>
+          </select><br><br>
 
-          </select>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal age-->
-<div class="modal fade" id="age" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Age Criteria</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <label for="">Select your age:</label><br>
-          <select class="modal-dropdown" name="">
+          <b><label for="">Select your age:</label></b><br>
+          <select class="modal-dropdown" name="age">
             <option value="0">Under 18</option>
             <option value="12">18-35</option>
             <option value="11">36</option>
@@ -140,31 +77,10 @@
             <option value="2">45</option>
             <option value="1">46</option>
             <option value="0">47</option>
-          </select>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
+          </select><br><br>
 
-<!-- Modal Adaptability-->
-<div class="modal fade" id="adaptability" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Adaptability Criteria</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <label for="">Select an appropriate option:</label><br>
-          <select class="modal-dropdown" name="">
+          <b><label for="">Select an appropriate option:</label></b><br>
+          <select class="modal-dropdown" name="family">
             <option value="5">Your spouse or partner's language level</option>
             <option value="5">Your study in Canada</option>
             <option value="5">Your spouse or partner's past study in Canada</option>
@@ -173,51 +89,34 @@
             <option value="5">Arranged Employment in Canada</option>
             <option value="5">Relatives in Canada(Check this criteria's description below)</option>
 
-          </select>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
+          </select><br><br>
 
-<!-- Modal employment-->
-<div class="modal fade" id="employment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Arranged Employment</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <label for="">Select your Employment status:</label>
+          <b><label for="">Select your Employment status:</label></b>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="10" checked>
+            <input class="form-check-input" type="radio" name="emp" id="exampleRadios1" value="10" checked>
             <label class="form-check-label" for="exampleRadios1">
               Valid Job offer
             </label>
           </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="0">
+          <input class="form-check-input" type="radio" name="emp" id="exampleRadios2" value="0">
           <label class="form-check-label" for="exampleRadios2">
               No Job offer
           </label>
-        </div>
+        </div><br>
+        <button type="button" onclick="calculateScore()" class="modal-btn">Calculate Now</button>
+
+
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
       </div>
     </div>
   </div>
 </div>
+
+
 <!-- ------------------MODALS END----------------------- -->
 
 
@@ -501,6 +400,26 @@
   </div>
 
     </div>
+
+    <div class="text-center">
+      <br><button onclick="showModal()" class="express-btn" type="button">Calculate your score!</button>
+    </div>
+
+    <div class="container1 container">
+      <div class="text-center performance">
+      <br><h1>Your Performance:</h1>
+
+      </div>
+      <div class="resultChart">
+        <canvas id="newChart"></canvas>
+      </div>
+
+      <div class="text-center">
+        <br><h3 class="insert-here-1"></h3>
+        <h4 class="insert-here-2"></h4>
+      </div>
+    </div>
+
 </section>
 
 

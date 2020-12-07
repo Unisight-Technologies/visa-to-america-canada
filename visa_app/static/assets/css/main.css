@@ -1,6 +1,38 @@
 .resize {
   max-width:100%;
 }
+/*
+.resultChart{
+  display: none;
+} */
+
+#myPopup{
+  display:none;
+}
+
+.insert-here-1, .insert-hhere-2{
+  padding: 10px;
+}
+
+.performance{
+  display: none;
+}
+
+.express-btn, .modal-btn{
+  background: #cc1616;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.express-btn:hover{
+  background: #e82d2d;
+}
+
+.modal-btn:hover{
+  background: #e82d2d;
+}
 
 #intro, #process, #eligibility ,#edu, #work,#adapt, #emp, #age{
   display: none;

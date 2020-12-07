@@ -51,46 +51,46 @@ class CareGiver(TemplateView):
 class Blog(View):
     def get(self, request, *args, **kwargs):
 
-        scrapper = scrap_news.Scrapper()
-
-        for i in range(0,5):
-            news = models.News.objects.create(
-        		author=scrapper.authors[i],
-        		title=scrapper.titles[i],
-        		description=scrapper.descriptions[i],
-        		url=scrapper.urls[i]
-                )
-            news.save()
-
-            image_url = scrapper.url_images[i]
-            response = requests.get(image_url, stream=True)
-
-            # Was the request OK?
-            if response.status_code != requests.codes.ok:
-                # Nope, error handling, skip file etc etc etc
-                continue
-
-            # Get the filename from the url, used for saving later
-            file_name = image_url.split('/')[-1]
-
-            # Create a temporary file
-            lf = tempfile.NamedTemporaryFile()
-
-            # Read the streamed image in sections
-            for block in response.iter_content(1024 * 8):
-
-                # If no more file then stop
-                if not block:
-                    break
-
-                # Write image block to temporary file
-                lf.write(block)
-
-            # Create the model you want to save the image to
-            new_news = models.News.objects.get(title=scrapper.titles[i])
-            # Save the temporary image to the model#
-            # This saves the model so be sure that it is valid
-            new_news.image.save(file_name, files.File(lf))
+        # scrapper = scrap_news.Scrapper()
+        #
+        # for i in range(0,5):
+        #     news = models.News.objects.create(
+        # 		author=scrapper.authors[i],
+        # 		title=scrapper.titles[i],
+        # 		description=scrapper.descriptions[i],
+        # 		url=scrapper.urls[i]
+        #         )
+        #     news.save()
+        #
+        #     image_url = scrapper.url_images[i]
+        #     response = requests.get(image_url, stream=True)
+        #
+        #     # Was the request OK?
+        #     if response.status_code != requests.codes.ok:
+        #         # Nope, error handling, skip file etc etc etc
+        #         continue
+        #
+        #     # Get the filename from the url, used for saving later
+        #     file_name = image_url.split('/')[-1]
+        #
+        #     # Create a temporary file
+        #     lf = tempfile.NamedTemporaryFile()
+        #
+        #     # Read the streamed image in sections
+        #     for block in response.iter_content(1024 * 8):
+        #
+        #         # If no more file then stop
+        #         if not block:
+        #             break
+        #
+        #         # Write image block to temporary file
+        #         lf.write(block)
+        #
+        #     # Create the model you want to save the image to
+        #     new_news = models.News.objects.get(title=scrapper.titles[i])
+        #     # Save the temporary image to the model#
+        #     # This saves the model so be sure that it is valid
+        #     new_news.image.save(file_name, files.File(lf))
 
         render_news = models.News.objects.all()
         context = {

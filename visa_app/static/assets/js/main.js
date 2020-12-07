@@ -195,3 +195,16 @@
   });
 
 })(jQuery);
+
+
+function showModal(){
+  $('#main_modal').modal();
+
+}
+
+
+// When the user clicks on div, open the popup
+function showPopup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}

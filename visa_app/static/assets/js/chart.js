@@ -2,7 +2,7 @@ var ctx = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: ["Language- Your score:25 out of", "Education", "Work Experience", "Age", "Arranged Employment", "Adaptability"],
+    labels: ["Language", "Education", "Work Experience", "Age", "Arranged Employment", "Adaptability"],
     datasets: [{
       backgroundColor: [
         "#2ecc71",
@@ -20,36 +20,6 @@ var myChart = new Chart(ctx, {
 //
 var canvas = document.getElementById("myChart");
 
-function languagePressed(){
-
-  $('#language').modal();
-}
-
-function educationPressed(){
-  $('#education').modal();
-
-
-}
-function workPressed(){
-  $('#work').modal();
-
-
-}
-function employmentPressed(){
-  $('#employment').modal();
-
-
-}
-function adaptabilityPressed(){
-  $('#adaptability').modal();
-
-
-}
-function agePressed(){
-  $('#age').modal();
-
-
-}
 
 canvas.onclick = function(evt){
     var activePoints = myChart.getElementsAtEvent(evt);
@@ -59,7 +29,7 @@ canvas.onclick = function(evt){
 
         var label = chartData.labels[idx];
         if(label == "Language"){
-          languagePressed();
+
           $('#edu').css('display', 'none');
           $('#work').css('display', 'none');
           $('#adapt').css('display', 'none');
@@ -70,7 +40,7 @@ canvas.onclick = function(evt){
         }
 
         if(label == "Education"){
-          educationPressed();
+
           $('#lang').css('display', 'none');
           $('#work').css('display', 'none');
           $('#adapt').css('display', 'none');
@@ -81,7 +51,7 @@ canvas.onclick = function(evt){
         }
 
         if(label == "Work Experience"){
-          workPressed();
+
           $('#lang').css('display', 'none');
           $('#edu').css('display', 'none');
           $('#adapt').css('display', 'none');
@@ -92,7 +62,7 @@ canvas.onclick = function(evt){
         }
 
         if(label == "Age"){
-          agePressed();
+          
           $('#lang').css('display', 'none');
           $('#work').css('display', 'none');
           $('#adapt').css('display', 'none');
@@ -103,7 +73,7 @@ canvas.onclick = function(evt){
         }
 
         if(label == "Arranged Employment"){
-          employmentPressed();
+          
           $('#lang').css('display', 'none');
           $('#work').css('display', 'none');
           $('#adapt').css('display', 'none');
@@ -114,7 +84,7 @@ canvas.onclick = function(evt){
         }
 
         if(label == "Adaptability"){
-          adaptabilityPressed();
+          
           $('#lang').css('display', 'none');
           $('#work').css('display', 'none');
           $('#edu').css('display', 'none');
@@ -127,3 +97,59 @@ canvas.onclick = function(evt){
 
     // => activePoints is an array of points on the canvas that are at the same position as the click event.
 };
+
+var scored = 0;
+
+
+var ctx = document.getElementById("newChart").getContext('2d');
+var newChart = new Chart(ctx, {
+  type: 'pie',
+  data: {
+    labels: [],
+    datasets: [{
+      backgroundColor: [
+        "#06DB5E",
+        "#E74C3C"
+      ],
+      data: []
+    }]
+  }
+});
+
+function calculateScore(){
+  var language = document.forms["score-form"]["language"].value;
+  var work = document.forms["score-form"]["work"].value;
+  var education = document.forms["score-form"]["education"].value;
+  var family = document.forms["score-form"]["family"].value;
+  var emp = document.forms["score-form"]["emp"].value;
+  var age = document.forms["score-form"]["age"].value;
+
+  var score = (Number(language)+Number(work)+Number(education)+Number(family)+Number(emp)+Number(age))
+  scored = score;
+
+  $('#main_modal').modal('hide');
+  newChart.data.labels.push("Your Marks ");
+  newChart.data.datasets[0].data.push(scored);
+  newChart.data.labels.push(" ");
+  newChart.data.datasets[0].data.push(100-scored);
+  newChart.update()
+  if (score>67){
+
+    $('.insert-here-1').text("YOUR SCORE: "+score+" pts");
+    $('.insert-here-2').text("CONGRATULATIONS, YOU HAVE PASSED THE TEST!");
+    $('.insert-here-1').css('background', '#06DB5E');
+
+  }
+  else{
+    $('.insert-here-1').text("YOUR SCORE: "+score+" pts");
+    $('.insert-here-2').text("SORRY, YOU DID NOT PASS THE TEST.");
+    $('.insert-here-1').css('background', '#E74C3C');
+    $('.insert-here-1').css('color', 'white');
+
+
+
+  }
+  $('.express-btn').css('display', 'none');
+  $('.performance').css('display', 'inherit');
+
+}
