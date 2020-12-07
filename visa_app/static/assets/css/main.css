@@ -18,7 +18,7 @@
   display: none;
 }
 
-.express-btn, .modal-btn{
+.express-btn, .submit1, .modal-btn{
   background: #cc1616;
   border: 0;
   padding: 10px 24px;

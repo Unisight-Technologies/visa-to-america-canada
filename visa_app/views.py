@@ -1,8 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import View, TemplateView
 from . import models
+from . import mailHandler
 # from . import scrap_news
 import requests
+from django.contrib import messages
 # import tempfile
 
 from django.core import files
@@ -23,6 +25,30 @@ class AboutPage(TemplateView):
 
 class ContactPage(TemplateView):
     template_name = "contact.html"
+
+
+    def post(self, request):
+
+        form = request.POST
+        name = form.get('name')
+        email = form.get('email')
+        phone = form.get('phone')
+        subject = form.get('subject')
+        message = form.get('message')
+
+        new_contact = models.Contact.objects.create(
+            name=name,
+            email=email,
+            phone=phone,
+            subject=subject,
+            message=message
+
+        )
+        new_contact.save()
+        mailHandler.sendMailToUser(name, email)
+        mailHandler.sendMailToVisaToCanada(name, email, phone, subject, message)
+        messages.success(request, "Your query has been successfully submitted. We will get back to you soon.")
+        return redirect("contact")
 
 class StudentPage(TemplateView):
     template_name = "student.html"
