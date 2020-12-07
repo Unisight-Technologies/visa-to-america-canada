@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import View, TemplateView
 from . import models
-from . import scrap_news
+# from . import scrap_news
 import requests
-import tempfile
+# import tempfile
 
 from django.core import files
 

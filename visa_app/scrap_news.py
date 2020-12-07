@@ -1,7 +1,7 @@
 import urllib.error
 import urllib.parse
 import urllib.request
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 import pprint
 
