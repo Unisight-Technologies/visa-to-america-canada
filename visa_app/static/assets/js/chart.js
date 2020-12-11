@@ -62,7 +62,7 @@ canvas.onclick = function(evt){
         }
 
         if(label == "Age"){
-          
+
           $('#lang').css('display', 'none');
           $('#work').css('display', 'none');
           $('#adapt').css('display', 'none');
@@ -73,7 +73,7 @@ canvas.onclick = function(evt){
         }
 
         if(label == "Arranged Employment"){
-          
+
           $('#lang').css('display', 'none');
           $('#work').css('display', 'none');
           $('#adapt').css('display', 'none');
@@ -84,7 +84,7 @@ canvas.onclick = function(evt){
         }
 
         if(label == "Adaptability"){
-          
+
           $('#lang').css('display', 'none');
           $('#work').css('display', 'none');
           $('#edu').css('display', 'none');
@@ -97,6 +97,8 @@ canvas.onclick = function(evt){
 
     // => activePoints is an array of points on the canvas that are at the same position as the click event.
 };
+
+
 
 var scored = 0;
 
