@@ -57,8 +57,8 @@
 
 @media only screen and (max-width: 700px) {
   #google_translate_element{
-    width: 20px;
-    overflow: hidden;
+    width: 100px;
+    overflow: scroll;
   }
 }
 
@@ -138,13 +138,19 @@
 }
 }
 
+/* @media (max-width: 600px){
+.nav-inspiring{
+  width: 100%;
+}
+} */
+
 .nav-right{
   float: right;
 }
 
-.nav-menu{
+/* .nav-menu{
   margin-right: 5%;
-}
+} */
 
 #header.header-scrolled{
   background: white;
@@ -258,7 +264,7 @@
 }
 
 .nav-menu > ul > li{
-  padding: 15px 15px;
+  padding: 15px 10px;
   margin-left: 0px;
 }
 
