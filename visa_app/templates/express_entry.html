@@ -3,8 +3,8 @@
 {% block body_block %}
 
 <!-- ------------------MODALS START----------------------- -->
-<!-- Modal education-->
-<div class="modal fade" id="main_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal Workers-->
+<div class="modal fade" id="main_modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -19,10 +19,28 @@
 
           <div class="form-group">
 
-            <b><label for="">Enter your Language score: </label></b><br>
-            <label for="">(If not given any test, <a onclick="showPopup()" href="#">check out these links</a></label><br>
+            <b><label for="">Enter your CLB Label: </label></b><br>
+            <select class="modal-dropdown" name="language">
+              <option value="24">
+                CLB7
+              </option>
+              <option value="27">
+                CLB8
+              </option>
+              <option value="29">
+                CLB9
+              </option>
+              <option value="31.5">
+                CLB10
+              </option>
+              <option value="33.5">
+                CLB11
+              </option>
+              <option value="36">
+                CLB12
+              </option>
+            </select><br>
 
-            <input type="number" name="language" min="0" max="28" value=""><br><br>
             <!-- <span class="popuptext show" id="myPopup">
               We only need your email to send you payment receipt.<br><br>
               We won't be storing your email in our database.
@@ -36,22 +54,9 @@
                 University Degree at the Master's Level or equal OR University Entry
                   to practice proffesional degree.
               </option>
-              <option value="21">Canadian Post Secondary Degree OR Diploma
-                 for programs longer than 3 or equal years.
-               </option>
-              <option value="19">
-                Canadian Post Secondary Degree OR Diploma
-                for programs longer than 2 or equal years.
-              </option>
-              <option value="15">
-                Canadian Post Secondary Degree OR Diploma
-                for programs longer than 1 or equal years.
-              </option>
-              <option value="5">
-                Canadian High School Diploma OR Equal
-              </option>
+
             </select>
-          </div>
+
 
           <b><label for="">Select your work experience:</label></b><br>
           <select class="modal-dropdown" name="work">
@@ -91,22 +96,10 @@
 
           </select><br><br>
 
-          <b><label for="">Select your Employment status:</label></b>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="emp" id="exampleRadios1" value="10" checked>
-            <label class="form-check-label" for="exampleRadios1">
-              Valid Job offer
-            </label>
+
+        <button type="button" onclick="calculateScore1()" class="modal-btn">Calculate Now</button>
+
           </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="emp" id="exampleRadios2" value="0">
-          <label class="form-check-label" for="exampleRadios2">
-              No Job offer
-          </label>
-        </div><br>
-        <button type="button" onclick="calculateScore()" class="modal-btn">Calculate Now</button>
-
-
         </form>
       </div>
       <div class="modal-footer">
@@ -116,6 +109,226 @@
   </div>
 </div>
 
+<!-------------------------------- Modal Trades--------------------- -->
+
+<div class="modal fade" id="main_modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Compute your score!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form name="score-form">
+
+
+          <div class="form-group">
+
+            <b><label for="">Enter your CLB Label: </label></b><br>
+            <select class="modal-dropdown" name="language">
+              <option value="17.5">
+                CLB4/CLB5(CLB4-Reading & Writing and CLB5-Listening & Speaking)
+              </option>
+              <option value="21.5">
+                CLB6
+               </option>
+              <option value="24">
+                CLB7
+              </option>
+              <option value="27">
+                CLB8
+              </option>
+              <option value="29">
+                CLB9
+              </option>
+              <option value="31.5">
+                CLB10
+              </option>
+              <option value="33.5">
+                CLB11
+              </option>
+              <option value="36">
+                CLB12
+              </option>
+            </select><br>
+
+            <!-- <span class="popuptext show" id="myPopup">
+              We only need your email to send you payment receipt.<br><br>
+              We won't be storing your email in our database.
+            </span> -->
+            <b><label for="">Select your education status:</label></b>
+            <select class="modal-dropdown" name="education">
+              <option value="25">
+                University Degree at the Doctoral(PHD) Level
+              </option>
+              <option value="23">
+                University Degree at the Master's Level or equal OR University Entry
+                  to practice proffesional degree.
+              </option>
+              <option value="21">Canadian Post Secondary Degree OR Diploma
+                 for programs longer than 3 or equal years.
+               </option>
+              <option value="19">
+                Canadian Post Secondary Degree OR Diploma
+                for programs longer than 2 or equal years.
+              </option>
+              <option value="15">
+                Canadian Post Secondary Degree OR Diploma
+                for programs longer than 1 or equal years.
+              </option>
+              <option value="5">
+                Canadian High School Diploma OR Equal
+              </option>
+            </select>
+
+
+          <b><label for="">Select your work experience:</label></b><br>
+          <select class="modal-dropdown" name="work">
+            <option value="15">6 or more years</option>
+            <option value="13">4-5 years</option>
+            <option value="11">2-3 years</option>
+          </select><br><br>
+
+
+          <b><label for="">Select an appropriate option:</label></b><br>
+          <select class="modal-dropdown" name="family">
+            <option value="5">Your spouse or partner's language level</option>
+            <option value="5">Your study in Canada</option>
+            <option value="5">Your spouse or partner's past study in Canada</option>
+            <option value="10">Your past your in Canada</option>
+            <option value="5">Your spouse or common-law partner's past work in Canada</option>
+            <option value="5">Arranged Employment in Canada</option>
+            <option value="5">Relatives in Canada(Check this criteria's description below)</option>
+
+          </select><br><br>
+
+          <b><label for="">Select your Employment status:</label></b>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="emp2" id="exampleRadios1" value="10">
+            <label class="form-check-label" for="exampleRadios1">
+              Valid Job offer
+            </label>
+          </div>
+        <!-- <div class="form-check">
+          <input class="form-check-input" type="radio" name="emp2" id="exampleRadios2" value="0">
+          <label class="form-check-label" for="exampleRadios2">
+              No Job offer
+          </label>
+        </div><br> -->
+        <br>
+        <button type="button" onclick="calculateScore2()" class="modal-btn">Calculate Now</button>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---------------------------- Modal Canadian Experience--------------------------------------- -->
+
+<div class="modal fade" id="main_modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Compute your score!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form name="score-form">
+
+
+          <div class="form-group">
+
+            <b><label for="">Enter your CLB Label: </label></b><br>
+            <select class="modal-dropdown" name="language">
+              <option value="24">
+                CLB7
+              </option>
+              <option value="27">
+                CLB8
+              </option>
+              <option value="29">
+                CLB9
+              </option>
+              <option value="31.5">
+                CLB10
+              </option>
+              <option value="33.5">
+                CLB11
+              </option>
+              <option value="36">
+                CLB12
+              </option>
+            </select><br>
+
+            <!-- <span class="popuptext show" id="myPopup">
+              We only need your email to send you payment receipt.<br><br>
+              We won't be storing your email in our database.
+            </span> -->
+            <b><label for="">Select your education status:</label></b>
+            <select class="modal-dropdown" name="education">
+              <option value="25">
+                University Degree at the Doctoral(PHD) Level
+              </option>
+              <option value="23">
+                University Degree at the Master's Level or equal OR University Entry
+                  to practice proffesional degree.
+              </option>
+              <option value="21">Canadian Post Secondary Degree OR Diploma
+                 for programs longer than 3 or equal years.
+               </option>
+              <option value="19">
+                Canadian Post Secondary Degree OR Diploma
+                for programs longer than 2 or equal years.
+              </option>
+              <option value="15">
+                Canadian Post Secondary Degree OR Diploma
+                for programs longer than 1 or equal years.
+              </option>
+
+            </select>
+
+
+          <b><label for="">Select your work experience:</label></b><br>
+          <select class="modal-dropdown" name="work">
+            <option value="15">6 or more years</option>
+            <option value="13">4-5 years</option>
+            <option value="11">2-3 years</option>
+            <option value="9">1 year</option>
+          </select><br><br>
+
+          <b><label for="">Select an appropriate option:</label></b><br>
+          <select class="modal-dropdown" name="family">
+            <option value="5">Your spouse or partner's language level</option>
+            <option value="5">Your study in Canada</option>
+            <option value="5">Your spouse or partner's past study in Canada</option>
+            <option value="10">Your past your in Canada</option>
+            <option value="5">Your spouse or common-law partner's past work in Canada</option>
+            <option value="5">Arranged Employment in Canada</option>
+            <option value="5">Relatives in Canada(Check this criteria's description below)</option>
+
+          </select><br><br>
+
+
+        <button type="button" onclick="calculateScore3()" class="modal-btn">Calculate Now</button>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ------------------MODALS END----------------------- -->
 
@@ -291,25 +504,124 @@
 
   <div id="intro">
       <div class="container" data-aos="zoom-in">
-    <p>1Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        <section style="background: white;">
+          <div class="container">
+            <h1>Skilled Workers Selection <br> Factors for Immigration</h1>
+            <p>The minimum score required to be eligible for permanent residence <br> in the Express Entry System
+              under the Federal skill Workers Program is <b>67 points</b> <br> out of <b>100 points</b>.
+         <br><br>The six selection factors and the maximum points for each factor is:
+        </p>
+
+          </div>
+          <div class="row">
+
+          <div class="container1">
+
+            <div>
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="container" style="margin-top: 50px; padding-right: 100px;" >
+              <div id="edu">
+                <h1>Education(25 Points)</h1>
+                <p>
+                  Foreign nationals (FN) get points for their post-secondary
+                  education – degree, diploma or certificate. In order to get points in
+                  this category the FN needs to have an Educational Credential Assessment (ECA)
+                  report from a designated organization showing that their education is equivalent
+                  to a completed certificate, diploma or degree from a Canadian post-secondary institution.
+                  Having a Master’s degree will qualify for more points.</p>
+
+              </div>
+
+              <div id="lang">
+
+                <h1>Language(28 Points)</h1>
+                <p>Canada has two official languages - English and French.
+                  Foreign nationals (FN) who desire to immigrate to Canada need to have
+                  good command in either of the two official languages. To prove their
+                  language level, they need to have an approved language test. They need
+                  to get a minimum level of Canadian Language Benchmark (CLB) 7 for
+                  English, or Niveaux de compétencelinguistiquecanadiens (NCLC) 7 for
+                  French in listening, reading, writing and speaking. Depending on their
+                  score, they can get a maximum of 28 points.</p>
+
+              </div>
+
+              <div id="work">
+                <h1>Work Experience(15 Points)</h1>
+                <p>Foreign nationals (FN) get points for the number of years
+                  they have worked full-time doing paid work (at least 30 hours per week,
+                  or an equal amount of part-time [15 hours per week for 24 months]).
+                  FN will get more points if they have worked in Canada while they were
+                  studying. Having six or more years’ experience affords them 15 points.</p>
+              </div>
+
+              <div id="adapt">
+                <h1>Adaptability(10 Points)</h1>
+
+                <p>Foreign nationals (FN) and their spouse can earn 10 points
+                  in this category. If the spouse’s language level in either French or
+                  English is CLB 4 in all 4 language abilities (listening, reading,
+                  writing and speaking), they are allotted 5 points. If the spouse
+                  has worked or studied in Canada, they are allotted 5 points. If the
+                  FN has a relative in Canada, they qualify for 5 additional points.</p>
+              </div>
+
+              <div id="emp">
+
+                <h1>Arranged Employment(10 Points)</h1>
+
+                <p>Foreign nationals (FN) can get points if they have a job
+                  offer of at least one year from a Canadian employer. They need to
+                  get the job offer before they apply to come to Canada as a Federal
+                  Skilled Worker. If the employer has made a valid job offer, they
+                  will get 10 points. </p>
+              </div>
+
+              <div id="age">
+
+                <h1>Age(12 Points)</h1>
+
+                <p>Age is a key factor if a FN want to reach the 67 points
+                  threshold.  FN between the age group of 18-35 get maximum points.
+                  As the age increases the points for age drop.</p>
+              </div>
+
+
+            </div>
+          </div>
+
+            </div>
+
+            <div class="text-center">
+              <br><button onclick="showModal1()" class="express-btn" type="button">Calculate your score!</button>
+            </div>
+
+            <div class="container1 container">
+              <div class="text-center performance">
+              <br><h1>Your Performance:</h1>
+
+              </div>
+              <div class="resultChart">
+                <canvas id="newChart"></canvas>
+              </div>
+
+              <div class="text-center">
+                <br><h3 class="insert-here-1"></h3>
+                <h4 class="insert-here-2"></h4>
+              </div>
+            </div>
+
+        </section>
     </div>
   </div>
 
   <div id="eligibility">
       <div class="container" data-aos="zoom-in">
-    <p>2Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </div>
-
-  <div id="process">
-      <div class="container" data-aos="zoom-in">
-    <p>3Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-    </div>
-  </div>
-
-</section>
-
-<section style="background: white;">
+        <section style="background: white;">
   <div class="container">
     <h1>Skilled Workers Selection <br> Factors for Immigration</h1>
     <p>The minimum score required to be eligible for permanent residence <br> in the Express Entry System
@@ -323,7 +635,7 @@
   <div class="container1">
 
     <div>
-      <canvas id="myChart"></canvas>
+      <canvas id="myChart2"></canvas>
     </div>
   </div>
 
@@ -402,7 +714,7 @@
     </div>
 
     <div class="text-center">
-      <br><button onclick="showModal()" class="express-btn" type="button">Calculate your score!</button>
+      <br><button onclick="showModal2()" class="express-btn" type="button">Calculate your score!</button>
     </div>
 
     <div class="container1 container">
@@ -421,6 +733,129 @@
     </div>
 
 </section>
+    </div>
+  </div>
+
+  <div id="process">
+      <div class="container" data-aos="zoom-in">
+        <section style="background: white;">
+  <div class="container">
+    <h1>Skilled Workers Selection <br> Factors for Immigration</h1>
+    <p>The minimum score required to be eligible for permanent residence <br> in the Express Entry System
+      under the Federal skill Workers Program is <b>67 points</b> <br> out of <b>100 points</b>.
+ <br><br>The six selection factors and the maximum points for each factor is:
+</p>
+
+  </div>
+  <div class="row">
+
+  <div class="container1">
+
+    <div>
+      <canvas id="myChart3"></canvas>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="container" style="margin-top: 50px; padding-right: 100px;" >
+      <div id="edu">
+        <h1>Education(25 Points)</h1>
+        <p>
+          Foreign nationals (FN) get points for their post-secondary
+          education – degree, diploma or certificate. In order to get points in
+          this category the FN needs to have an Educational Credential Assessment (ECA)
+          report from a designated organization showing that their education is equivalent
+          to a completed certificate, diploma or degree from a Canadian post-secondary institution.
+          Having a Master’s degree will qualify for more points.</p>
+
+      </div>
+
+      <div id="lang">
+
+        <h1>Language(28 Points)</h1>
+        <p>Canada has two official languages - English and French.
+          Foreign nationals (FN) who desire to immigrate to Canada need to have
+          good command in either of the two official languages. To prove their
+          language level, they need to have an approved language test. They need
+          to get a minimum level of Canadian Language Benchmark (CLB) 7 for
+          English, or Niveaux de compétencelinguistiquecanadiens (NCLC) 7 for
+          French in listening, reading, writing and speaking. Depending on their
+          score, they can get a maximum of 28 points.</p>
+
+      </div>
+
+      <div id="work">
+        <h1>Work Experience(15 Points)</h1>
+        <p>Foreign nationals (FN) get points for the number of years
+          they have worked full-time doing paid work (at least 30 hours per week,
+          or an equal amount of part-time [15 hours per week for 24 months]).
+          FN will get more points if they have worked in Canada while they were
+          studying. Having six or more years’ experience affords them 15 points.</p>
+      </div>
+
+      <div id="adapt">
+        <h1>Adaptability(10 Points)</h1>
+
+        <p>Foreign nationals (FN) and their spouse can earn 10 points
+          in this category. If the spouse’s language level in either French or
+          English is CLB 4 in all 4 language abilities (listening, reading,
+          writing and speaking), they are allotted 5 points. If the spouse
+          has worked or studied in Canada, they are allotted 5 points. If the
+          FN has a relative in Canada, they qualify for 5 additional points.</p>
+      </div>
+
+      <div id="emp">
+
+        <h1>Arranged Employment(10 Points)</h1>
+
+        <p>Foreign nationals (FN) can get points if they have a job
+          offer of at least one year from a Canadian employer. They need to
+          get the job offer before they apply to come to Canada as a Federal
+          Skilled Worker. If the employer has made a valid job offer, they
+          will get 10 points. </p>
+      </div>
+
+      <div id="age">
+
+        <h1>Age(12 Points)</h1>
+
+        <p>Age is a key factor if a FN want to reach the 67 points
+          threshold.  FN between the age group of 18-35 get maximum points.
+          As the age increases the points for age drop.</p>
+      </div>
+
+
+    </div>
+  </div>
+
+    </div>
+
+    <div class="text-center">
+      <br><button onclick="showModal3()" class="express-btn" type="button">Calculate your score!</button>
+    </div>
+
+    <div class="container1 container">
+      <div class="text-center performance">
+      <br><h1>Your Performance:</h1>
+
+      </div>
+      <div class="resultChart">
+        <canvas id="newChart"></canvas>
+      </div>
+
+      <div class="text-center">
+        <br><h3 class="insert-here-1"></h3>
+        <h4 class="insert-here-2"></h4>
+      </div>
+    </div>
+
+</section>
+    </div>
+  </div>
+
+</section>
+
+
 
 
 </main>

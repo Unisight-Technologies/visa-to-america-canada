@@ -197,8 +197,18 @@
 })(jQuery);
 
 
-function showModal(){
-  $('#main_modal').modal();
+function showModal1(){
+  $('#main_modal1').modal();
+
+}
+
+function showModal2(){
+  $('#main_modal2').modal();
+
+}
+
+function showModal3(){
+  $('#main_modal3').modal();
 
 }
 
