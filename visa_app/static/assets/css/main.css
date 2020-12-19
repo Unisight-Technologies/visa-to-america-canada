@@ -10,11 +10,11 @@
   display:none;
 }
 
-.insert-here-1, .insert-hhere-2{
+.insert-here1-1, .insert-here1-2, .insert-here2-1, .insert-here2-2, .insert-here3-1, .insert-here3-2 {
   padding: 10px;
 }
 
-.performance{
+.performance1, .performance2, .performance3{
   display: none;
 }
 

@@ -103,8 +103,8 @@ canvas.onclick = function(evt){
 var scored = 0;
 
 
-var ctx = document.getElementById("newChart").getContext('2d');
-var newChart = new Chart(ctx, {
+var ctx = document.getElementById("newChart1").getContext('2d');
+var newChart1 = new Chart(ctx, {
   type: 'pie',
   data: {
     labels: [],
@@ -119,26 +119,26 @@ var newChart = new Chart(ctx, {
 });
 
 function calculateScore1(){
-  var language = document.forms["score-form"]["language"].value;
-  var work = document.forms["score-form"]["work"].value;
-  var education = document.forms["score-form"]["education"].value;
-  var family = document.forms["score-form"]["family"].value;
-  var age = document.forms["score-form"]["age"].value;
+  var language = document.forms["score-form1"]["language"].value;
+  var work = document.forms["score-form1"]["work"].value;
+  var education = document.forms["score-form1"]["education"].value;
+  var family = document.forms["score-form1"]["family"].value;
+  var age = document.forms["score-form1"]["age"].value;
 
   var score = (Number(language)+Number(work)+Number(education)+Number(family)+Number(age))
   scored = score;
 
-  $('#main_modal1').modal('hide');
-  newChart.data.labels.push("Your Marks ");
-  newChart.data.datasets[0].data.push(scored);
-  newChart.data.labels.push(" ");
-  newChart.data.datasets[0].data.push(100-scored);
-  newChart.update()
 
+  newChart1.data.labels.push("Your Marks ");
+  newChart1.data.datasets[0].data.push(scored);
+  newChart1.data.labels.push(" ");
+  newChart1.data.datasets[0].data.push(100-scored);
+  newChart1.update()
 
-    $('.insert-here-1').text("YOUR SCORE: "+score+" pts");
-    $('.insert-here-2').text("CONGRATULATIONS, YOU HAVE PASSED THE TEST!");
-    $('.insert-here-1').css('background', '#06DB5E');
+    $('#main_modal1').modal('hide');
+    $('.insert-here1-1').text("YOUR SCORE: "+score+" pts");
+    $('.insert-here1-2').text("CONGRATULATIONS, YOU HAVE PASSED THE TEST!");
+    $('.insert-here1-1').css('background', '#06DB5E');
 
 
   // else{
@@ -152,7 +152,7 @@ function calculateScore1(){
   //
   //
   // }
-  $('.express-btn').css('display', 'none');
-  $('.performance').css('display', 'inherit');
+  $('.express-btn1').css('display', 'none');
+  $('.performance1').css('display', 'inherit');
 
 }

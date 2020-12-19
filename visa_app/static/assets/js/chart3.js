@@ -103,8 +103,8 @@ canvas.onclick = function(evt){
 var scored = 0;
 
 
-var ctx = document.getElementById("newChart").getContext('2d');
-var newChart = new Chart(ctx, {
+var ctx = document.getElementById("newChart3").getContext('2d');
+var newChart3 = new Chart(ctx, {
   type: 'pie',
   data: {
     labels: [],
@@ -119,27 +119,28 @@ var newChart = new Chart(ctx, {
 });
 
 function calculateScore3(){
-  var language = document.forms["score-form"]["language"].value;
-  var work = document.forms["score-form"]["work"].value;
-  var education = document.forms["score-form"]["education"].value;
-  var family = document.forms["score-form"]["family"].value;
+  var language = document.forms["score-form3"]["language"].value;
+  var work = document.forms["score-form3"]["work"].value;
+  var education = document.forms["score-form3"]["education"].value;
+  var family = document.forms["score-form3"]["family"].value;
 
 
 
-  var score = (Number(language)+Number(work)+Number(education)+Number(family)+Number(emp))
+  var score = (Number(language)+Number(work)+Number(education)+Number(family))
   scored = score;
 
-  $('#main_modal3').modal('hide');
-  newChart.data.labels.push("Your Marks ");
-  newChart.data.datasets[0].data.push(scored);
-  newChart.data.labels.push(" ");
-  newChart.data.datasets[0].data.push(100-scored);
-  newChart.update()
+  console.log('Hello');
+  console.log(score);
+  newChart3.data.labels.push("Your Marks ");
+  newChart3.data.datasets[0].data.push(scored);
+  newChart3.data.labels.push(" ");
+  newChart3.data.datasets[0].data.push(100-scored);
+  newChart3.update()
 
-
-    $('.insert-here-1').text("YOUR SCORE: "+score+" pts");
-    $('.insert-here-2').text("CONGRATULATIONS, YOU HAVE PASSED THE TEST!");
-    $('.insert-here-1').css('background', '#06DB5E');
+    $('#main_modal3').modal('hide');
+    $('.insert-here3-1').text("YOUR SCORE: "+score+" pts");
+    $('.insert-here3-2').text("CONGRATULATIONS, YOU HAVE PASSED THE TEST!");
+    $('.insert-here3-1').css('background', '#06DB5E');
 
 
 
@@ -152,7 +153,7 @@ function calculateScore3(){
   //
   // }
 
-  $('.express-btn').css('display', 'none');
-  $('.performance').css('display', 'inherit');
+  $('.express-btn3').css('display', 'none');
+  $('.performance3').css('display', 'inherit');
 
 }

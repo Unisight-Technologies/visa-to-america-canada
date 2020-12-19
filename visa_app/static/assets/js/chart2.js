@@ -103,8 +103,8 @@ canvas.onclick = function(evt){
 var scored = 0;
 
 
-var ctx = document.getElementById("newChart").getContext('2d');
-var newChart = new Chart(ctx, {
+var ctx = document.getElementById("newChart2").getContext('2d');
+var newChart2 = new Chart(ctx, {
   type: 'pie',
   data: {
     labels: [],
@@ -119,29 +119,30 @@ var newChart = new Chart(ctx, {
 });
 
 function calculateScore2(){
-  var language = document.forms["score-form"]["language"].value;
-  var work = document.forms["score-form"]["work"].value;
-  var education = document.forms["score-form"]["education"].value;
-  var family = document.forms["score-form"]["family"].value;
-  var emp = document.forms["score-form"]["emp2"].value;
+  var language = document.forms["score-form2"]["language"].value;
+  var work = document.forms["score-form2"]["work"].value;
+  var education = document.forms["score-form2"]["education"].value;
+  var family = document.forms["score-form2"]["family"].value;
+
+  console.log(language, work, education, family, emp);
 
 
 
-  var score = (Number(language)+Number(work)+Number(education)+Number(family)+Number(emp))
+  var score = (Number(language)+Number(work)+Number(education)+Number(family))
   scored = score;
   console.log(score)
 
-  $('#main_modal2').modal('hide');
-  newChart.data.labels.push("Your Marks ");
-  newChart.data.datasets[0].data.push(scored);
-  newChart.data.labels.push(" ");
-  newChart.data.datasets[0].data.push(100-scored);
-  newChart.update()
 
+  newChart2.data.labels.push("Your Marks ");
+  newChart2.data.datasets[0].data.push(scored);
+  newChart2.data.labels.push(" ");
+  newChart2.data.datasets[0].data.push(100-scored);
+  newChart2.update()
 
-    $('.insert-here-1').text("YOUR SCORE: "+score+" pts");
-    $('.insert-here-2').text("CONGRATULATIONS, YOU HAVE PASSED THE TEST!");
-    $('.insert-here-1').css('background', '#06DB5E');
+    $('#main_modal2').modal('hide');
+    $('.insert-here2-1').text("YOUR SCORE: "+score+" pts");
+    $('.insert-here2-2').text("CONGRATULATIONS, YOU HAVE PASSED THE TEST!");
+    $('.insert-here2-1').css('background', '#06DB5E');
 
 
 
@@ -154,7 +155,7 @@ function calculateScore2(){
   //
   // }
 
-  $('.express-btn').css('display', 'none');
-  $('.performance').css('display', 'inherit');
+  $('.express-btn2').css('display', 'none');
+  $('.performance2').css('display', 'inherit');
 
 }
