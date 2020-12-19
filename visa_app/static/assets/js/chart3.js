@@ -30,67 +30,37 @@ canvas.onclick = function(evt){
         var label = chartData.labels[idx];
         if(label == "Language"){
 
-          $('#edu').css('display', 'none');
-          $('#work').css('display', 'none');
-          $('#adapt').css('display', 'none');
-          $('#emp').css('display', 'none');
-          $('#age').css('display', 'none');
-          $('#lang').slideToggle();
+          $('#edu3').css('display', 'none');
+          $('#work3').css('display', 'none');
+          $('#adapt3').css('display', 'none');
+          $('#lang3').slideToggle();
 
         }
 
         if(label == "Education"){
 
-          $('#lang').css('display', 'none');
-          $('#work').css('display', 'none');
-          $('#adapt').css('display', 'none');
-          $('#emp').css('display', 'none');
-          $('#age').css('display', 'none');
-          $('#edu').slideToggle();
+          $('#lang3').css('display', 'none');
+          $('#work3').css('display', 'none');
+          $('#adapt3').css('display', 'none');
+          $('#edu3').slideToggle();
 
         }
 
         if(label == "Work Experience"){
 
-          $('#lang').css('display', 'none');
-          $('#edu').css('display', 'none');
-          $('#adapt').css('display', 'none');
-          $('#emp').css('display', 'none');
-          $('#age').css('display', 'none');
-          $('#work').slideToggle();
-
-        }
-
-        if(label == "Age"){
-
-          $('#lang').css('display', 'none');
-          $('#work').css('display', 'none');
-          $('#adapt').css('display', 'none');
-          $('#emp').css('display', 'none');
-          $('#edu').css('display', 'none');
-          $('#age').slideToggle();
-
-        }
-
-        if(label == "Arranged Employment"){
-
-          $('#lang').css('display', 'none');
-          $('#work').css('display', 'none');
-          $('#adapt').css('display', 'none');
-          $('#edu').css('display', 'none');
-          $('#age').css('display', 'none');
-          $('#emp').slideToggle();
+          $('#lang3').css('display', 'none');
+          $('#edu3').css('display', 'none');
+          $('#adapt3').css('display', 'none');
+          $('#work3').slideToggle();
 
         }
 
         if(label == "Adaptability"){
 
-          $('#lang').css('display', 'none');
-          $('#work').css('display', 'none');
-          $('#edu').css('display', 'none');
-          $('#emp').css('display', 'none');
-          $('#age').css('display', 'none');
-          $('#adapt').slideToggle();
+          $('#lang3').css('display', 'none');
+          $('#work3').css('display', 'none');
+          $('#edu3').css('display', 'none');
+          $('#adapt3').slideToggle();
 
         }
       }

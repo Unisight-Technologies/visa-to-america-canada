@@ -38,6 +38,10 @@
   display: none;
 }
 
+#edu2, #work2,#adapt2, #emp2, #edu3, #work3,#adapt3, #emp3 {
+  display: none;
+}
+
 #main{
   margin-top: 100px;
 }
