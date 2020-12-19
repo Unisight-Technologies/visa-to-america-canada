@@ -461,22 +461,33 @@
       </div>
     </section>
 
+
+
     <div class="row">
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch" onclick="showContent('intro')" data-aos="fade-up">
         <div class="icon-box">
           <!-- <div class="icon"><i class="bx bxl-dribbble"></i></div> -->
           <img class="resize" src="https://www.reachimmigration.com/images/sections/5daec9839cf55.png" alt="">
-          <br><br><h4><a href="">Federal Skilled Worker Class </a></h4>
-          <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          <br><br><h4>Federal Skilled Worker Class</h4>
+          <section id="score" >
+            <div class="btn-get-started scrollto">
+              CALCULATE YOUR CSR SCORES
+            </div>
+              <!-- <a class="btn-get-started scrollto"onclick="showContent('intro')">CALCULATE YOUR CSR SCORES</a> -->
+          </section>
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" onclick="showContent('eligibility')" data-aos="fade-up" data-aos-delay="150">
         <div class="icon-box">
-
+          <br>
            <img class="resize" src="https://jtimmigration.com/wp-content/uploads/skilled-trades-immigrate-to-Canada.jpg" alt="">
-          <br><br><h4><a href="">Federal Skilled Trades Class </a></h4>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+          <br><br><h4><br>Federal Skilled Trades Class</h4>
+          <section id="score" >
+            <div class="btn-get-started scrollto">
+              CALCULATE YOUR CSR SCORES
+            </div>
+          </section>
         </div>
       </div>
 
@@ -484,8 +495,12 @@
         <div class="icon-box">
           <!-- <div class="icon"><i class="bx bx-tachometer"></i></div> -->
           <img class="resize" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnhQzG72hpylZobwKwUs-9W12KrznK7nZQJg&usqp=CAU" alt="">
-        <br><br>  <h4><a href="">Canadian Experience Class</a></h4>
-          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+        <br><br>  <h4>Canadian Experience Class</h4><br>
+        <section id="score" >
+          <div class="btn-get-started scrollto">
+            CALCULATE YOUR CSR SCORES
+          </div>
+        </section>
         </div>
       </div>
 
@@ -495,6 +510,7 @@
 </section><!-- End Services Section -->
 
 
+
 <section style="background: white;">
 
   <div id="intro">
@@ -502,8 +518,8 @@
         <section style="background: white;">
           <div class="container">
             <h1>Skilled Workers Selection <br> Factors for Immigration</h1>
-            <p>The minimum score required to be eligible for permanent residence <br> in the Express Entry System
-              under the Federal skill Workers Program is <b>67 points</b> <br> out of <b>100 points</b>.
+            <p>The minimum score required to be eligible for permanent residence in the Express Entry System
+              under the Federal skill Workers Program is <b>67 points</b> out of <b>100 points</b>.
          <br><br>The six selection factors and the maximum points for each factor is:
         </p>
 
@@ -512,7 +528,7 @@
 
           <div class="container1">
 
-            <div>
+            <div style="padding-top: 90px;">
               <canvas id="myChart"></canvas>
             </div>
           </div>
@@ -595,19 +611,27 @@
               <br><button onclick="showModal1()" class="express-btn1 modal-btn" type="button">Calculate your score!</button>
             </div>
 
-            <div class="container1 container">
+            <div class="container">
               <div class="text-center performance1">
               <br><h1>Your Performance:</h1>
+              </div>
+              <div class="row">
+
+              <div class="container1">
+                <div class="resultChart">
+                  <canvas id="newChart1"></canvas>
+                </div>
+              </div>
+
+                <div class="col">
+                  <div class="text-center" style="padding-top: 70px;">
+                    <br><h3 class="insert-here1-1"></h3>
+                    <h4 class="insert-here1-2"></h4>
+                  </div>
+                </div>
 
               </div>
-              <div class="resultChart">
-                <canvas id="newChart1"></canvas>
-              </div>
 
-              <div class="text-center">
-                <br><h3 class="insert-here1-1"></h3>
-                <h4 class="insert-here1-2"></h4>
-              </div>
             </div>
 
         </section>
@@ -629,7 +653,7 @@
 
   <div class="container1">
 
-    <div>
+    <div style="padding-top: 90px;">
       <canvas id="myChart2"></canvas>
     </div>
   </div>
@@ -701,20 +725,29 @@
       <br><button onclick="showModal2()" class="express-btn2 modal-btn" type="button">Calculate your score!</button>
     </div>
 
-    <div class="container1 container">
+    <div class="container">
       <div class="text-center performance2">
       <br><h1>Your Performance:</h1>
-
-      </div>
-      <div class="resultChart">
-        <canvas id="newChart2"></canvas>
       </div>
 
-      <div class="text-center">
-        <br><h3 class="insert-here2-1"></h3>
-        <h4 class="insert-here2-2"></h4>
+      <div class="row">
+
+        <div class="container1">
+          <div class="resultChart">
+            <canvas id="newChart2"></canvas>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="text-center" style="padding-top: 70px;">
+            <br><h3 class="insert-here2-1"></h3>
+            <h4 class="insert-here2-2"></h4>
+          </div>
+        </div>
       </div>
-    </div>
+
+  </div>
+
 
 </section>
     </div>
@@ -735,7 +768,7 @@
 
   <div class="container1">
 
-    <div>
+    <div style="padding-top: 90px;">
       <canvas id="myChart3"></canvas>
     </div>
   </div>
@@ -798,20 +831,27 @@
       <br><button onclick="showModal3()" class="express-btn3 modal-btn" type="button">Calculate your score!</button>
     </div>
 
-    <div class="container1 container">
+    <div class="container">
       <div class="text-center performance3">
       <br><h1>Your Performance:</h1>
+      </div>
+      <div class="row">
 
-      </div>
-      <div class="resultChart">
-        <canvas id="newChart3"></canvas>
-      </div>
+          <div class="container1">
+            <div class="resultChart">
+              <canvas id="newChart3"></canvas>
+            </div>
+          </div>
 
-      <div class="text-center">
-        <br><h3 class="insert-here3-1"></h3>
-        <h4 class="insert-here3-2"></h4>
-      </div>
+          <div class="col">
+            <div class="text-center" style="padding-top: 70px;">
+              <br><h3 class="insert-here3-1"></h3>
+              <h4 class="insert-here3-2"></h4>
+            </div>
+          </div>
+
     </div>
+  </div>
 
 </section>
     </div>
