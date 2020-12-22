@@ -34,7 +34,8 @@ urlpatterns = [
     path('nominee/', views.Nominee.as_view(),name="nominee"),
     path('express_entry/', views.ExpressEntry.as_view(),name="express_entry"),
     path('care_giver/', views.CareGiver.as_view(),name="care_giver"),
-    path('blogs/', views.Blog.as_view(), name="blogs")
+    path('blogs/', views.Blog.as_view(), name="blogs"),
+    path('refresh/', views.refresh, name="refresh")
 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
