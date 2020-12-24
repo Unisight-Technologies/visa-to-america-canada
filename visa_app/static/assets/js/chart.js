@@ -2,7 +2,7 @@ var ctx = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: ["Language", "Education", "Work Experience", "Age", "Adaptability"],
+    labels: ["Language", "Education", "Work Experience", "Age", "Adaptability", "Arranged Employement"],
     datasets: [{
       backgroundColor: [
         "#2ecc71",
@@ -12,7 +12,7 @@ var myChart = new Chart(ctx, {
         "#f1c40f",
         "#e74c3c",
       ],
-      data: [28, 25, 15, 12, 10]
+      data: [28, 25, 15, 12, 10, 10]
     }]
   },
   weight: 150
@@ -124,8 +124,9 @@ function calculateScore1(){
   var education = document.forms["score-form1"]["education"].value;
   var family = document.forms["score-form1"]["family"].value;
   var age = document.forms["score-form1"]["age"].value;
+  var emp = document.forms["score-form1"]["emp"].value;
 
-  var score = (Number(language)+Number(work)+Number(education)+Number(family)+Number(age))
+  var score = (Number(language)+Number(work)+Number(education)+Number(family)+Number(age)+Number(emp))
   scored = score;
 
 
@@ -135,18 +136,23 @@ function calculateScore1(){
   newChart1.data.datasets[0].data.push(100-scored);
   newChart1.update()
 
+if(score>=67){
+  $('#main_modal1').modal('hide');
+  $('.insert-here1-1').text("YOUR SCORE: "+score+" pts");
+  $('.insert-here1-2').text("CONGRATULATIONS, YOU HAVE PASSED THE TEST!");
+  $('.insert-here1-1').css('background', '#06DB5E');
+}
+
+
+
+
+else{
     $('#main_modal1').modal('hide');
     $('.insert-here1-1').text("YOUR SCORE: "+score+" pts");
-    $('.insert-here1-2').text("CONGRATULATIONS, YOU HAVE PASSED THE TEST!");
-    $('.insert-here1-1').css('background', '#06DB5E');
-
-
-  // else{
-  //   $('.insert-here-1').text("YOUR SCORE: "+score+" pts");
-  //   $('.insert-here-2').text("SORRY, YOU DID NOT PASS THE TEST.");
-  //   $('.insert-here-1').css('background', '#E74C3C');
-  //   $('.insert-here-1').css('color', 'white');
-  //
+    $('.insert-here1-2').text("SORRY, YOU DID NOT PASS THE TEST.");
+    $('.insert-here1-1').css('background', '#E74C3C');
+    $('.insert-here1-1').css('color', 'white');
+  }
   //
   //
   //

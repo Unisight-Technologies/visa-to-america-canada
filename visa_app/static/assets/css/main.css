@@ -5,6 +5,10 @@
 .resultChart{
   display: none;
 } */
+/* I removed this google icon */
+.goog-te-gadget-icon{
+  display:none;
+}
 
 #myPopup{
   display:none;
