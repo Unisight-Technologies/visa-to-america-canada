@@ -22,13 +22,13 @@ def sendMailToUser(name, send_to):
 
 def sendMailToVisaToCanada(name, email, phone, subject, message):
     message = "A new message has been received on our website:\n\nName: "+name+"\nEmail Id: "+email+"\nPhone: "+phone+"\nSubject: "+subject+"\nMessage: "+message+"\n\n\nRegards"
-    subject = "A message has been received on Leighfisher Consultancy Pvt. Ltd."
+    subject = "A message has been received on Visa to Canada."
     send_mail(
         subject,
         message,
         env("EMAIL"),
         # ['thetravancorecharitabletrust@gmail.com','hari.vijayan89@gmail.com','thomaslijo634@gmail.com','sajangeorge6040@gmail.com'],
-        ['rajabhishek9271@gmail.com'],
+        ['info@visatocanada.pro'],
         fail_silently = False,
 
     )
