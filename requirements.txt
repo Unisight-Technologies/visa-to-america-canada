@@ -3,3 +3,4 @@ gunicorn
 pillow
 django-cleanup
 beautifulsoup4
+celery
