@@ -47,106 +47,22 @@
   </div>
 </section><!-- End About Section -->
 
-<!-- ======= Why Us Section ======= -->
-<section id="why-us" class="why-us">
-  <div class="container">
+<!-- ======= Map Section ======= -->
 
-    <div class="row" style="justify-content: center";>
-
-      <div class="col-lg-3" data-aos="fade-up">
-        <div class="box">
-          <span>01</span>
-          <h4>MALTA</h4>
-          <!-- <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p> -->
-        </div>
-      </div>
-
-      <div class="col-lg-3 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="150">
-        <div class="box">
-          <span>02</span>
-          <h4>PORTUGAL</h4>
-          <!-- <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p> -->
-        </div>
-      </div>
-
-      <div class="col-lg-3 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-        <div class="box">
-          <span>03</span>
-          <h4>SPAIN</h4>
-          <!-- <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p> -->
-        </div>
-      </div>
-
-      <div class="col-lg-3 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-        <div class="box">
-          <span>04</span>
-          <h4>GREECE</h4>
-          <!-- <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p> -->
-        </div>
-      </div>
-
-      <div class="col-lg-3 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-        <div class="box">
-          <span>05</span>
-          <h4>CYPRUS</h4>
-          <!-- <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p> -->
-        </div>
-      </div>
-
-      <div class="col-md-3 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-        <div class="box">
-          <span>06</span>
-          <h4>IRELAND</h4>
-          <!-- <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p> -->
-        </div>
-      </div>
-
-      <div class="col-lg-3 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-        <div class="box">
-          <span>07</span>
-          <h4>AUSTRALIA</h4>
-          <!-- <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p> -->
-        </div>
-      </div>
-
-      <div class="col-lg-3 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-        <div class="box">
-          <span>08</span>
-          <h4>GERMANY</h4>
-          <!-- <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p> -->
-        </div>
-      </div>
-
-      <div class="col-lg-3 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-        <div class="box">
-          <span>09</span>
-          <h4>NEW ZEALAND</h4>
-          <!-- <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p> -->
-        </div>
-      </div>
-
-      <div class="col-lg-3 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-        <div class="box">
-          <span>10</span>
-          <h4>DENMARK</h4>
-          <!-- <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p> -->
-        </div>
-      </div>
-
-      <div class="col-lg-3" data-aos="fade-up">
-        <div class="box">
-          <span>11</span>
-          <i class="italy flag"></i>
-          <h4>ITALY</h4>
-          <!-- <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p> -->
-        </div>
-      </div>
-
-    </div>
-
+ <section >
+  <div style="padding-top: 10px;">
+    <div class="map" id="chartdiv" style="display: flex; width: 784px; height: 292px; margin:auto" width="784" height="292">
+    <!-- <div class="map" id="chartdiv"></div> -->
   </div>
 </section><!-- End Why Us Section -->
 
-</main>
+
+</main> <!-- End #main -->
+
+<!-- MAPS -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+<script src="{% static 'assets/js/map.js' %}"></script>
 
 {% endblock %}
