@@ -25,6 +25,9 @@ class PortfolioPage(TemplateView):
 class AboutPage(TemplateView):
     template_name = "about.html"
 
+class Comingpage(TemplateView):
+    template_name= "coming_soon.html"
+
 class ContactPage(TemplateView):
     template_name = "contact.html"
 

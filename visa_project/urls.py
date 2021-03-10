@@ -34,6 +34,7 @@ urlpatterns = [
     path('nominee/', views.Nominee.as_view(),name="nominee"),
     path('express_entry/', views.ExpressEntry.as_view(),name="express_entry"),
     path('care_giver/', views.CareGiver.as_view(),name="care_giver"),
+    path('coming_soon/', views.Comingpage.as_view(),name="coming_soon"),
     path('blogs/', views.Blog.as_view(), name="blogs"),
     path('refresh/', views.refresh, name="refresh")
 
