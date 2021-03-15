@@ -36,6 +36,10 @@ urlpatterns = [
     path('care_giver/', views.CareGiver.as_view(),name="care_giver"),
     path('coming_soon/', views.Comingpage.as_view(),name="coming_soon"),
     path('blogs/', views.Blog.as_view(), name="blogs"),
+    path('spain_coming_soon/',views.Spain_Comingpage.as_view(),name="spain_coming_soon"),
+    path('Denmark_coming_soon/',views.Denmark_Comingpage.as_view(),name="Denmark_coming_soon"),
+    path('Italy_coming_soon/',views.Italy_Comingpage.as_view(),name="Italy_coming_soon"),
+    path('Greece_coming_soon/',views.Greece_Comingpage.as_view(),name="Greece_comingsoon"),
     path('refresh/', views.refresh, name="refresh")
 
 
