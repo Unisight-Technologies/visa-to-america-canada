@@ -154,3 +154,12 @@ def refresh(request):
 
 def coming_soon(request):
     return render(request, 'coming.html')
+
+class policy(TemplateView):
+    template_name= "policy.html"
+
+class terms(TemplateView):
+    template_name= "terms.html"
+
+class general(TemplateView):
+    template_name= "generaldisclaimer.html"
