@@ -25,6 +25,9 @@ class PortfolioPage(TemplateView):
 class AboutPage(TemplateView):
     template_name = "about.html"
 
+class Comingpage(TemplateView):
+    template_name= "coming_soon.html"
+
 class ContactPage(TemplateView):
     template_name = "contact.html"
 
@@ -75,6 +78,19 @@ class ExpressEntry(TemplateView):
 
 class CareGiver(TemplateView):
     template_name = "care_giver.html"
+
+class Spain_Comingpage(TemplateView):
+    template_name= "spain_coming_soon.html"
+
+class Denmark_Comingpage(TemplateView):
+    template_name= "Denmark_coming_soon.html"
+
+class Italy_Comingpage(TemplateView):
+    template_name= "Italy_coming_soon.html"
+
+class Greece_Comingpage(TemplateView):
+    template_name= "Greece_coming_soon.html"
+
 
 class Blog(View):
     def get(self, request, *args, **kwargs):
