@@ -135,3 +135,6 @@ def refresh(request):
         new_news.image.save(file_name, files.File(lf))
 
     return HttpResponse('News fetched successfully!')
+
+def coming_soon(request):
+    return render(request, 'coming.html')
