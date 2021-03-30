@@ -163,3 +163,6 @@ class terms(TemplateView):
 
 class general(TemplateView):
     template_name= "generaldisclaimer.html"
+
+class givesit(TemplateView):
+    template_name= "givesit.html"

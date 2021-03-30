@@ -44,6 +44,7 @@ urlpatterns = [
     path('policy/',views.policy.as_view(),name="policy"),
     path('terms/',views.terms.as_view(),name="terms"),
     path('generaldisclaimer/',views.general.as_view(),name="general"),
+    path('givesit/',views.givesit.as_view(),name="givesit"),
 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
