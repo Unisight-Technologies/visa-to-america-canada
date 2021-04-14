@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/visanror/public_html/
+    - /bin/cp -R /home/visanror/repositories/visa-to-america-canada/static $DEPLOYPATH
