@@ -3,3 +3,4 @@ visa_app/__pycache__
 visa_app/migrations/__pycache__
 visa_app/.env
 visa_project/.env
+static

@@ -1,5 +1,8 @@
 ---
 deployment:
   tasks:
+    - source /home/visanror/virtualenv/repositories/visa-to-america-canada/3.8/bin/activate && cd /home/visanror/repositories/visa-to-america-canada
+    - python manage.py collectstatic
+    - cd
     - export DEPLOYPATH=/home/visanror/public_html/
     - /bin/cp -R /home/visanror/repositories/visa-to-america-canada/static $DEPLOYPATH
