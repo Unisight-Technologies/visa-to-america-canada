@@ -36,6 +36,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['ec2-65-0-19-167.ap-south-1.compute.amazonaws.com','127.0.0.1','visatocanada.pro','www.visatocanada.pro']
 
+#Recaptch secret key
+GOOGLE_RECAPTCHA_SECRET_KEY = env('RECAPTCHA_KEY')
+
 # Application definition
 
 INSTALLED_APPS = [
