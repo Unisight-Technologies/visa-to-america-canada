@@ -33,7 +33,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 SECRET_KEY = 'wp-u+6m&p-si0zh&qzo1dl8@kog-xi07fwfm8q#vhlax_4$6_7'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'ec2-65-0-19-167.ap-south-1.compute.amazonaws.com',
@@ -136,12 +136,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-STATICFILES_DIR = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/images')
 MEDIA_URL = '/media/'
 
+# Commenting to setup Heroku
+# STATICFILES_DIR = os.path.join(BASE_DIR, 'media')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # STATIC_ROOT = env('STATIC_ROOT')
 # Activate Django-Heroku.
