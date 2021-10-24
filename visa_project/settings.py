@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 import environ
+import django_heroku
 
 env = environ.Env()
 # reading .env file
@@ -34,7 +35,13 @@ SECRET_KEY = 'wp-u+6m&p-si0zh&qzo1dl8@kog-xi07fwfm8q#vhlax_4$6_7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['ec2-65-0-19-167.ap-south-1.compute.amazonaws.com','127.0.0.1','visatocanada.pro','www.visatocanada.pro']
+ALLOWED_HOSTS = [
+    'ec2-65-0-19-167.ap-south-1.compute.amazonaws.com',
+    '127.0.0.1',
+    'visatocanada.pro',
+    'www.visatocanada.pro',
+    'visa-to-canada.herokuapp.com',
+    ]
 
 #Recaptch secret key
 GOOGLE_RECAPTCHA_SECRET_KEY = env('RECAPTCHA_KEY')
@@ -137,3 +144,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # STATIC_ROOT = env('STATIC_ROOT')
+# Activate Django-Heroku.
+django_heroku.settings(locals())
